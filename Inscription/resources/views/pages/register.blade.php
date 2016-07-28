@@ -4,7 +4,7 @@
 
 <div class="panel panel-info">
 	  <div class="panel-heading">
-			<h3 class="panel-title text-center"><b>S'enregistrer</b></h3>
+			<h3 class="panel-title text-center"><b>S'enregistrer !</b></h3>
 	  </div>
 	  <div class="panel-body">
         <div class="login">
