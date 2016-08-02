@@ -10,6 +10,12 @@
         <div class="login">
             <div class="heading">
                 <form method="post" action="auth/register">
+                    <!-- Affichage de l'erreur lors de l'interaction avec la base de données. -->
+                    @if(count($errors) and count($errors->get('dbError')))
+                        <span class="text-danger">{{$errors->get('dbError')[0]}}</span>
+                    @endif
+
+
                     <div class="form-group">
                         <div class="input-group input-group-lg">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}" />
@@ -19,7 +25,7 @@
 
                         <!--Affichage du message d'erreurs password1-->
                         @if(count($errors) > 0 and count($errors->get('name')))
-                            <label class="text-danger">{{$errors->get('name')[0]}}</label>
+                            <span class="text-danger">{{$errors->get('name')[0]}}</span>
                         @endif
                     </div>
                     <div class="form-group">
@@ -30,7 +36,7 @@
 
                         <!--Affichage du message d'erreurs password1-->
                         @if(count($errors) > 0 and count($errors->get('email')))
-                            <label class="text-danger">{{$errors->get('email')[0]}}</label>
+                            <span class="text-danger">{{$errors->get('email')[0]}}</span>
                         @endif
                     </div>
                     <div class="form-group">
@@ -41,7 +47,7 @@
 
                         <!--Affichage du message d'erreurs password1-->
                         @if(count($errors) > 0 and count($errors->get('password')))
-                            <label class="text-danger">{{$errors->get('password')[0]}}</label>
+                            <span class="text-danger">{{$errors->get('password')[0]}}</span>
                         @endif
 
                     </div>
@@ -53,7 +59,7 @@
 
                         <!--Affichage du message d'erreurs password1-->
                         @if(count($errors) > 0 and count($errors->get('password1')))
-                            <label class="text-danger">{{$errors->get('password1')[0]}}</label>
+                            <span class="text-danger">{{$errors->get('password1')[0]}}</span>
                         @endif
 
                     </div>

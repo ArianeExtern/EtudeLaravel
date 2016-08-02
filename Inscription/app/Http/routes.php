@@ -31,7 +31,7 @@ Route::get('/users', ['as' => 'Liste des enregistrements', function(){
  */
 Route::group(['prefix' => 'auth'], function(){
 
-    Route::post('/register', ['as' => 'Controller Enregistrement', 'uses' => 'RegisterController@register']);
+    Route::post('/register', ['as' => 'Controller Enregistrement', 'uses' => 'InscriptionController@registerHandler']);
 
 });
 

@@ -40,6 +40,9 @@ class RegisterController extends Controller
         //On recupère les information du formulaire dans un tableau associatif (Clé valeur).
         $data = $request->all();
 
+        dd($data);
+
+        /*
         //On valide les données
         $validator = $this->validateData($data);
 
@@ -61,7 +64,7 @@ class RegisterController extends Controller
                 'password' => $data['password'],
             ]);
         }
-
+        */
         return redirect('/users');
     }
 
