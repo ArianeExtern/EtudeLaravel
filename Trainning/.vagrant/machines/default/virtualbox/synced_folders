@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/Code/Trainning":{"type":null,"mount_options":[],"guestpath":"/home/vagrant/Code/Trainning","hostpath":"C:/Users/SEYDOU BERTHE/Code/Trainning","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/SEYDOU BERTHE/Code/Trainning","disabled":false,"__vagrantfile":true}}}

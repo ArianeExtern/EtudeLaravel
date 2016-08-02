@@ -1,0 +1,8 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = true
+	ignorecase = true
+[remote "origin"]
+	url = git@github.com:ArianeExtern/EtudeLaravel.git
+	fetch = +refs/heads/*:refs/remotes/origin/*

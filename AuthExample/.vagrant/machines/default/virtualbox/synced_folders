@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/AuthExample":{"type":null,"mount_options":[],"guestpath":"/home/vagrant/AuthExample","hostpath":"C:/Users/SEYDOU BERTHE/Code/AuthExample","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/SEYDOU BERTHE/Code/AuthExample","disabled":false,"__vagrantfile":true}}}
