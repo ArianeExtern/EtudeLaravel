@@ -1,0 +1,1 @@
+Cliquer sur le lien pour réinitialiser le mot de passe : {{ url('password/reset/'.$token) }}
