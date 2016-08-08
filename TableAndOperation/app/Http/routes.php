@@ -18,3 +18,9 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+Route::post('/postVideo', 'Video\VideoController@postVideo');
+
+Route::get('/searchVideo', 'Video\VideoController@searchVideo');
+
+Route::get('/home/sortVideo', ['middleware' => 'auth', 'uses' => 'Video\VideoController@sortVideos']);
