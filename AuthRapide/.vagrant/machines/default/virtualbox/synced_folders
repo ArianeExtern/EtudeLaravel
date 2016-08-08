@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/Code/AuthRapide":{"type":null,"mount_options":[],"guestpath":"/home/vagrant/Code/AuthRapide","hostpath":"C:/Users/SEYDOU BERTHE/Code/AuthRapide","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/SEYDOU BERTHE/Code/AuthRapide","disabled":false,"__vagrantfile":true}}}
