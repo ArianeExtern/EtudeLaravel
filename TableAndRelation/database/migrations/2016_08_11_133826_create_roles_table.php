@@ -10,8 +10,8 @@ class CreateRolesTable extends Migration {
 		Schema::create('roles', function(Blueprint $table) {
 			$table->increments('id');
 			$table->string('nom');
-			$table->integer('film_id')->unsigned();
-			$table->integer('acteur_id')->unsigned();
+			$table->integer('film_id')->nullable()->unsigned();
+			$table->integer('acteur_id')->nullable()->unsigned();
 		});
 	}
 

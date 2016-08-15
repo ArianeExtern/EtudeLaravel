@@ -96,7 +96,10 @@ class FilmController extends Controller {
       //On recupère le metteur en scène avec les personne asscoier
       $mess = \App\Model\Mes::with('personne')->get();
 
-      return view('pages.films', ['film' => $film, 'categories' => $categories, 'mess' => $mess, 'id' => $id]);
+      //Recuperation des Acteur
+      $acteurs = \App\Model\Acteur::with('personne')->get();
+
+      return view('pages.films', ['film' => $film, 'categories' => $categories, 'mess' => $mess, 'id' => $id, 'acteurs' => $acteurs]);
   }
 
   /**
@@ -122,6 +125,40 @@ class FilmController extends Controller {
   {
       \App\Model\Film::find($id)->delete();
       return redirect('/film');
+  }
+
+  /**
+   *  Fonction utiliser pour ajouter le role à film
+   */
+  public function addRole()
+  {
+      $film = \App\Model\Film::find(request()->get('idFilm'));
+
+      $film->roles()->save(new \App\Model\Role(['nom' => request()->get('role')]));
+
+      return redirect('/film/'.request()->get('idFilm').'/edit');
+  }
+
+
+    /**
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function roleToActeur(){
+
+      //Recupere le film en question
+      $film = \App\Model\Film::with('roles')
+          ->find(request()->get('idFilm'));
+
+      //On recupère l'acteur
+      $acteur = \App\Model\Acteur::find(request()->get('acteur_id'));
+
+      //Association du role à l'acteur
+      $film->roles()
+          ->where('id', request()->get('role_id'))
+          ->get()->first()
+          ->acteur()->associate($acteur)->save();
+
+      return redirect('/film/'.request()->get('idFilm').'/edit');
   }
   
 }

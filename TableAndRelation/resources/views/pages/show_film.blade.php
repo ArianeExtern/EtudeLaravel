@@ -22,7 +22,7 @@
 
                 <label class="text-danger">Roles :
                     @forelse($film->roles()->get() as $role)
-                        <small>{{$role->nom}} </small>
+                        <small>{{$role->nom.' ( '.$role->acteur()->first()->personne()->first()->nom.' ), '}} </small>
                     @empty
                         <small>Aucun role.</small>
                     @endforelse

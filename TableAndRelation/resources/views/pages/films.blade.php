@@ -6,4 +6,8 @@
             @include('pages.formulaire')
 		</div>
 	</div>
+
+    @if($film->id)
+        @include('pages.ajout_role')
+    @endif
 @endsection

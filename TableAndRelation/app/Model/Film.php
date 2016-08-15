@@ -25,4 +25,7 @@ class Film extends Model {
 		return $this->hasMany('App\Model\Role');
 	}
 
+	/*public function acteurs(){
+	    return $this->hasManyThrough('App\Model\Acteur', 'App\Model\Role');
+    }*/
 }
