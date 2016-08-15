@@ -12,12 +12,12 @@ class Acteur extends Model {
 
 	public function roles()
 	{
-		return $this->hasMany('Model\Role');
+		return $this->hasMany('App\Model\Role');
 	}
 
 	public function personne()
 	{
-		return $this->morphMany('Model\Personne', 'info');
+		return $this->morphMany('App\Model\Personne', 'infoable');
 	}
 
 }

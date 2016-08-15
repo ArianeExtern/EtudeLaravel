@@ -12,12 +12,12 @@ class Mes extends Model {
 
 	public function films()
 	{
-		return $this->hasMany('Model\Film');
+		return $this->hasMany('App\Model\Film');
 	}
 
 	public function personne()
 	{
-		return $this->morphMany('Model\Personne', 'info');
+		return $this->morphMany('App\Model\Personne', 'infoable');
 	}
 
 }

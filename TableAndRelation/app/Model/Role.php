@@ -12,12 +12,12 @@ class Role extends Model {
 
 	public function acteur()
 	{
-		return $this->belongsTo('Model\Acteur');
+		return $this->belongsTo('App\Model\Acteur');
 	}
 
 	public function film()
 	{
-		return $this->belongsTo('Model\Film');
+		return $this->belongsTo('App\Model\Film');
 	}
 
 }

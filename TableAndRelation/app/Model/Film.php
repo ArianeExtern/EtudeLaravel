@@ -8,21 +8,21 @@ class Film extends Model {
 
 	protected $table = 'films';
 	public $timestamps = false;
-	protected $fillable = array('titre', 'annee', 'description', 'mes_id');
+	protected $fillable = array('titre', 'annee', 'description');
 
-	public function mess()
+	public function mes()
 	{
-		return $this->belongsTo('Model\Mes');
+		return $this->belongsTo('App\Model\Mes');
 	}
 
 	public function categories()
 	{
-		return $this->belongsToMany('Model\Categorie');
+		return $this->belongsToMany('App\Model\Categorie');
 	}
 
 	public function roles()
 	{
-		return $this->hasMany('Model\Role');
+		return $this->hasMany('App\Model\Role');
 	}
 
 }

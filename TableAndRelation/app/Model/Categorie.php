@@ -12,7 +12,7 @@ class Categorie extends Model {
 
 	public function films()
 	{
-		return $this->belongsToMany('Model\Film');
+		return $this->belongsToMany('App\Model\Film');
 	}
 
 }
