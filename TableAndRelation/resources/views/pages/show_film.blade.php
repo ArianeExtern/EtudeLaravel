@@ -14,7 +14,7 @@
                 <label class="text-danger">Année : <small>{{$film->annee}}</small></label> <br/>
                 <label class="text-danger">Categories :
                     @forelse($categories as $category)
-                        <small>{{$category->nom}} </small>
+                        <small>{{$category->nom.', '}}</small>
                     @empty
                         <small>Aucune catégorie.</small>
                     @endforelse
@@ -22,7 +22,11 @@
 
                 <label class="text-danger">Roles :
                     @forelse($film->roles()->get() as $role)
-                        <small>{{$role->nom.' ( '.$role->acteur()->first()->personne()->first()->nom.' ), '}} </small>
+                        @if(!is_null($role->acteur()->first()))
+                            <small>{{$role->nom.' ( '.$role->acteur()->first()->personne()->first()->nom.' ), '}} </small>
+                        @else
+                            <small>{{$role->nom.', '}}</small>
+                        @endif
                     @empty
                         <small>Aucun role.</small>
                     @endforelse

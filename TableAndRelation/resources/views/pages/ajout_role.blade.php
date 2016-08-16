@@ -1,7 +1,7 @@
 
 <div class="row">
     <div class="col-md-10 col-md-offset-1">
-        <div class="col-md-5">
+        <div class="col-md-2">
         {{Form::open(['method' => 'POST', 'action' => 'FilmController@addRole'])}}
 
             <div class="form-group">
@@ -20,7 +20,7 @@
         {{Form::close()}}
         </div>
 
-        <div class="col-md-5">
+        <div class="col-md-3">
             {{Form::open(['method' => 'POST', 'action' => 'FilmController@roleToActeur'])}}
 
             <div class="form-group">
@@ -53,6 +53,30 @@
             <div class="form-group">
                 {{Form::submit('Role => Acteur', ['class' => 'btn btn-primary'])}}
             </div>
+            {{Form::close()}}
+        </div>
+
+        <div class="col-md-4">
+            {{Form::open(['method' => 'POST', 'action' => 'FilmController@categorieToFilm'])}}
+
+            <div class="form-group">
+                <h3>Ajout de Categorie à un film</h3>
+                <input name="idFilm" type="hidden" value="{{$id}}"/>
+            </div>
+
+            <!-- Liste des Categories -->
+            <div class="form-group">
+                <select name="cat_id" class="form-control">
+                    @foreach($categories as $cat)
+                        <option value="{{$cat->id}}">{{$cat->nom}}</option>
+                    @endforeach
+                </select>
+            </div>
+
+            <div class="form-group">
+                {{Form::submit('Categorie => Film', ['class' => 'btn btn-primary'])}}
+            </div>
+            {{Form::close()}}
         </div>
     </div>
 </div>

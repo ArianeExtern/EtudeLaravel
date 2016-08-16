@@ -1,6 +1,8 @@
 <?php namespace App\Http\Controllers;
 
 
+use App\Model\Categorie;
+
 class FilmController extends Controller {
 
   /**
@@ -112,7 +114,7 @@ class FilmController extends Controller {
   {
       $film = \App\Model\Film::find($id);
       $film->update(request()->all());
-      return redirect('/film');
+      return back();
   }
 
   /**
@@ -136,7 +138,7 @@ class FilmController extends Controller {
 
       $film->roles()->save(new \App\Model\Role(['nom' => request()->get('role')]));
 
-      return redirect('/film/'.request()->get('idFilm').'/edit');
+      return back();
   }
 
 
@@ -158,7 +160,17 @@ class FilmController extends Controller {
           ->get()->first()
           ->acteur()->associate($acteur)->save();
 
-      return redirect('/film/'.request()->get('idFilm').'/edit');
+      return back();
+  }
+
+  public function categorieToFilm(){
+
+      //Recuperer le film
+      $film = \App\Model\Film::find(request()->get('idFilm'));
+
+      //Asscocier la categorie au film
+      $film->categories()->attach(request()->get('cat_id'));
+      return back();
   }
   
 }

@@ -29,6 +29,7 @@ Route::get('/home/sortFilm', ['middleware' => 'auth', 'uses' => 'Film\FilmContro
 Route::resource('film', 'FilmController');
 Route::post('film/addRole', 'FilmController@addRole');
 Route::post('film/roleToActeur', 'FilmController@roleToActeur');
+Route::post('film/roleToActeur', 'FilmController@categorieToFilm');
 
 Route::resource('categorie', 'CategorieController');
 Route::resource('mes', 'MesController');
