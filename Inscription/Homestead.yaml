@@ -1,0 +1,36 @@
+---
+ip: "192.168.10.14"
+memory: 2048
+cpus: 1
+hostname: inscription
+name: inscription
+provider: virtualbox
+
+authorize: C:/Users/SEYDOU BERTHE/.ssh/id_rsa.pub
+
+keys:
+    - C:/Users/SEYDOU BERTHE/.ssh/id_rsa
+
+folders:
+    - map: "C:/Users/SEYDOU BERTHE/Code/Inscription"
+      to: "/home/vagrant/Code/Inscription"
+
+sites:
+    - map: sigeInscription.com
+      to: "/home/vagrant/Code/Inscription/public"
+
+databases:
+    - inscriptiondb
+
+# blackfire:
+#     - id: foo
+#       token: bar
+#       client-id: foo
+#       client-token: bar
+
+# ports:
+#     - send: 50000
+#       to: 5000
+#     - send: 7777
+#       to: 777
+#       protocol: udp
