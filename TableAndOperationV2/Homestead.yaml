@@ -1,0 +1,36 @@
+---
+ip: "192.168.10.20"
+memory: 2048
+cpus: 1
+hostname: tableandoperationV2
+name: tableandoperationV2
+provider: virtualbox
+
+authorize: C:/Users/SEYDOU BERTHE/.ssh/id_rsa.pub
+
+keys:
+    - C:/Users/SEYDOU BERTHE/.ssh/id_rsa
+
+folders:
+    - map: "C:/Users/SEYDOU BERTHE/Code/TableAndOperationV2"
+      to: "/home/vagrant/Code/TableAndOperationV2"
+
+sites:
+    - map: sigeTableAndOperationV2.com
+      to: "/home/vagrant/Code/TableAndOperationV2/public"
+
+databases:
+    - taov2db
+
+# blackfire:
+#     - id: foo
+#       token: bar
+#       client-id: foo
+#       client-token: bar
+
+# ports:
+#     - send: 50000
+#       to: 5000
+#     - send: 7777
+#       to: 777
+#       protocol: udp
