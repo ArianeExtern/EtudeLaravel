@@ -1,0 +1,36 @@
+---
+ip: "192.168.10.23"
+memory: 2048
+cpus: 1
+hostname: ckeditorintegration
+name: ckeditorintegration
+provider: virtualbox
+
+authorize: C:/Users/SEYDOU BERTHE/.ssh/id_rsa.pub
+
+keys:
+    - C:/Users/SEYDOU BERTHE/.ssh/id_rsa
+
+folders:
+    - map: "C:/Users/SEYDOU BERTHE/Code/CKEditorIntegration"
+      to: "/home/vagrant/Code/CKEditorIntegration"
+
+sites:
+    - map: sigeCkeditor.com
+      to: "/home/vagrant/Code/CKEditorIntegration/public"
+
+databases:
+    - ckeditordb
+
+# blackfire:
+#     - id: foo
+#       token: bar
+#       client-id: foo
+#       client-token: bar
+
+# ports:
+#     - send: 50000
+#       to: 5000
+#     - send: 7777
+#       to: 777
+#       protocol: udp

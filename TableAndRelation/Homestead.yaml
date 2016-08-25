@@ -1,0 +1,36 @@
+---
+ip: "192.168.10.21"
+memory: 2048
+cpus: 1
+hostname: tableandrelation
+name: tableandrelation
+provider: virtualbox
+
+authorize: C:/Users/SEYDOU BERTHE/.ssh/id_rsa.pub
+
+keys:
+    - C:/Users/SEYDOU BERTHE/.ssh/id_rsa
+
+folders:
+    - map: "C:/Users/SEYDOU BERTHE/Code/TableAndRelation"
+      to: "/home/vagrant/Code/TableAndRelation"
+
+sites:
+    - map: sigeTableAndRelation.com
+      to: "/home/vagrant/Code/TableAndRelation/public"
+
+databases:
+    - tardb
+
+# blackfire:
+#     - id: foo
+#       token: bar
+#       client-id: foo
+#       client-token: bar
+
+# ports:
+#     - send: 50000
+#       to: 5000
+#     - send: 7777
+#       to: 777
+#       protocol: udp
