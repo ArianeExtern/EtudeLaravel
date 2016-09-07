@@ -9,7 +9,7 @@
 
                 <div class="panel-body">
                     <!--Formulaire de recherche de film-->
-                    <form action="/home/searchFilm" method="get">
+                    <form action="{{url('home/searchFilm')}}" method="get">
                         <div class="row">
                             <div class="col-md-2">
                                 <h4 class="text-info">Rechercher : </h4>
@@ -29,7 +29,7 @@
 
                     <!--Formulaire d'insertion de Film-->
                     <h4 class="text-info">Ajouter un Film :</h4>
-                    <form action="/home/postFilm" method="post">
+                    <form action="{{url('home/postFilm')}}" method="post">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                         <div class="row">
                             <div class="col-md-2">
