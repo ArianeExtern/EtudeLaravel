@@ -9,7 +9,7 @@
 	  <div class="panel-body">
         <div class="login">
             <div class="heading">
-				<form method="POST" action="/auth/register">
+				<form method="POST" action="{{url('auth/register')}}">
 					{!! csrf_field() !!}
 
 					<div class="form-group">

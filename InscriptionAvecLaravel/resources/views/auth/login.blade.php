@@ -3,13 +3,13 @@
 @section('content')
 <div class="panel panel-info">
 	  <div class="panel-heading">
-			<h3 class="panel-title text-center"><b>Se Connecter !</b></h3>
+			<h3 class="panel-title text-center"><b>Connexion !</b></h3>
 	  </div>
 	  <div class="panel-body">
         <div class="login">
             <div class="heading">
 			
-				<form role="form" method="POST" action="/auth/login">
+				<form role="form" method="POST" action="{{url('/auth/login')}}">
 					{!! csrf_field() !!}
 
 					<div class="form-group">
@@ -38,5 +38,5 @@
 @endsection
 
 @section('corner')
-	<li><a href="/auth/register">S'enregistrer</a></li>
+	<li><a href="{{url('/auth/register')}}">S'enregistrer</a></li>
 @endsection

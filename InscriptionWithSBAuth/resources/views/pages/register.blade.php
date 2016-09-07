@@ -66,7 +66,7 @@
                     <div class="form-group pull-right">
                         <!--<a href="/login" class="btn btn-primary"><b>Log in</b></a>-->
                         <button type="submit"  class="btn btn-warning"><b>Sauvegarder</b></button>
-                        <a href="/" class="btn btn-danger"><b>Annuler</b></a>
+                        <a href="{{url('/')}}" class="btn btn-danger"><b>Annuler</b></a>
                     </div>
 
                 </form>

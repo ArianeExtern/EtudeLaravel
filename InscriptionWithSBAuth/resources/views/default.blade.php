@@ -17,13 +17,13 @@
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
           <div class="navbar-header">
-            <a class="navbar-brand" href="/">Accueil</a>
+            <a class="navbar-brand" href="{{url('/')}}">Accueil</a>
           </div>
 
           <ul class="nav navbar-nav">
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/users">Liste des utilisateur</a></li>
+            <li><a href="{{url('/users')}}">Liste des utilisateur</a></li>
           </ul>
         </div>
     </nav>

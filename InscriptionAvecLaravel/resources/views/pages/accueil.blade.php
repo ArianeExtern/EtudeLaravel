@@ -5,5 +5,5 @@
 @endsection
 
 @section('corner')
-	<li><form action="/auth/logout" method="GET"><button class="btn btn-default" type="submit">Deconnecté</button></form></li>
+	<li><form action="{{url('/auth/logout')}}" method="GET"><button class="btn btn-default" type="submit">Deconnecté</button></form></li>
 @endsection

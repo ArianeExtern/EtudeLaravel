@@ -17,7 +17,7 @@
     <nav class="navbar navbar-reverse">
         <div class="container-fluid">
           <div class="navbar-header">
-            <a class="navbar-brand" href="/">Accueil</a>
+            <a class="navbar-brand" href="{{url('/')}}">Accueil</a>
           </div>
 
           <ul class="nav navbar-nav">
