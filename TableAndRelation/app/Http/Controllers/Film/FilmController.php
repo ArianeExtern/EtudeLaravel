@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Film\Film;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Session;
+use \Validator;
 
 class FilmController extends Controller
 {
@@ -25,7 +26,7 @@ class FilmController extends Controller
     public function postFilm(Request $request){
 
         //Validation des données
-        $validator = $this->validateVideo($request->all());
+        $validator = $this->validateFilm($request->all());
         if($validator->fails()){
             return redirect('/home');
         }

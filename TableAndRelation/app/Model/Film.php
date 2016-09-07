@@ -8,7 +8,7 @@ class Film extends Model {
 
 	protected $table = 'films';
 	public $timestamps = false;
-	protected $fillable = array('titre', 'annee', 'description', 'mes_id');
+	protected $fillable = array('titre', 'annee', 'description', 'categorie');
 
 	public function mess()
 	{
